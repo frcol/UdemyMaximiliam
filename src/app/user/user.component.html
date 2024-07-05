@@ -1,6 +1,6 @@
 <div>
-  <button (click)="onSelectUser(item)" *ngFor="let item of users">
-    <img [src]="'assets/users/'+item.avatar" alt="">
-    <span>{{item.name}}</span>
+  <button (click)="onSelectUser(name())">
+    <img [src]="imagePath()" alt="">
+    <span>{{name()}}</span>
   </button>
 </div>
