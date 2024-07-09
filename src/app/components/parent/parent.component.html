@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-around gap-3 mt-3">
+  @for (userParent of users; track $index) {
+    <app-showDetails (select)="onSelected($event)" [user]="userParent"></app-showDetails>
+  }
+</div>
+
+<app-userTest [user]="selectedUser"></app-userTest>
+
+
