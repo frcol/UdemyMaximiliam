@@ -6,7 +6,7 @@ import { UserTestComponent } from "./components/user/user.component";
 import { DUMMY_USERS } from './dummy-users';
 import { TasksComponent } from "./tasks/tasks.component";
 import { ParentComponent } from "./components/parent/parent.component";
-import { User } from './user/user.component';
+import { User } from './user/user.model';
 
 @Component({
     selector: 'app-root',
@@ -20,9 +20,9 @@ export class AppComponent {
   title = 'UdemyMaximiliam';
 
   users = DUMMY_USERS;
-  selectedUser?: User = this.users[0];
+  selectedUser: User = {id:''} as User;
 
-   onSelected(user: User) {
+  onSelected(user: User) {
     this.selectedUser = user;
   }
 }
